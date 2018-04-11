@@ -1,0 +1,52 @@
+<!-- RACINE -->
+<!ELEMENT cv (poste, informations_personnelles, formations, competences, experiences, langues, centre_interet)>
+
+
+<!-- HEAD -->
+<!ELEMENT poste (#PCDATA)>
+<!ATTLIST poste  
+            typeContrat CDATA #IMPLIED>
+<!-- INFORMATIONS -->
+<!ELEMENT informations_personnelles (nom, prenom, date_naiss, adresse, email, telephone, portfolio)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT date_naiss (#PCDATA)>
+<!ATTLIST date_naiss
+            age NMTOKEN #IMPLIED>
+<!ELEMENT adresse (rue, ville)>
+ <!ELEMENT rue (#PCDATA)>
+ <!ATTLIST rue
+            numero NMTOKEN #IMPLIED>
+ <!ELEMENT ville (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+<!ELEMENT portfolio (#PCDATA)>
+
+<!-- FORMATIONS -->
+<!ELEMENT formations (formation+)>
+<!ELEMENT formation (diplome, etablissement)>
+<!ELEMENT diplome (#PCDATA) >
+<!ELEMENT etablissement (#PCDATA)>
+
+<!-- COMPETENCES -->
+<!ELEMENT competences (competence+)>
+  <!ELEMENT competence (#PCDATA)>
+  <!ATTLIST competence
+             >
+
+<!-- EXPERIENCES -->
+<!ELEMENT experiences (experience+)>
+<!ELEMENT experience (titre, entreprise, mission)>
+  <!ELEMENT titre (#PCDATA)>
+  <!ELEMENT entreprise (#PCDATA)>
+  <!ELEMENT mission (#PCDATA)>
+
+<!-- LANGUES -->
+<!ELEMENT langues (langue+)>
+<!ELEMENT langue (#PCDATA)>
+
+<!-- CENTRES INTERETS -->
+<!ELEMENT centre_interet (activite+)>
+  <!ELEMENT activite (#PCDATA)>
+
+
